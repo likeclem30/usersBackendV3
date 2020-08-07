@@ -89,7 +89,7 @@ class ChangePw(Resource):
                 .one())
         user.password = bcrypt.generate_password_hash(
                             args['new_password']
-        )
+        ).decode('UTF-8')
         db.session.add(user)
         db.session.commit()
 

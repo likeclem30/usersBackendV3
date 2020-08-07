@@ -1,6 +1,5 @@
 from flask import Flask
 from flask_restplus import Api
-from flask_cors import CORS
 
 
 def create_app():
@@ -8,7 +7,6 @@ def create_app():
     from users_backend.admin_namespace import admin_namespace
 
     application = Flask(__name__)
-    CORS(application)
     api = Api(application, version='0.1', title='Users Backend API',
               description='A Simple CRUD API')
 

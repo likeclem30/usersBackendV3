@@ -36,9 +36,9 @@ class UserCreate(Resource):
         args = user_parser.parse_args()
         # password = args['password']
 
-        # Hash and Salt Password
-        # password_hash = bcrypt.generate_password_hash(password)\
-        #   .decode('UTF-8')
+        """# Hash and Salt Password
+        password_hash = bcrypt.generate_password_hash(password)\
+            .decode('UTF-8')"""
 
         new_user = UserModel(username=args['username'],
                              password=args['password'],
